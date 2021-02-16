@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link th:href="@{/css/main.css}" rel="stylesheet" />
+</head>
+<head>
+    <title>Spring Boot Thymeleaf Crud</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" th:href="@{/css/main.css}" >
+    <!--===============================================================================================-->
+</head>
+<body>
+<div class="container">
+
+    <div lang="en" th:replace="fragments/header :: header"> </div>
+    <div th:replace="@{'views/' + ${content}} :: ${content}"></div>
+    <br />
+    <div lang="en" th:replace="fragments/footer :: footer"> </div>
+
+</div>
+</body>
+</html>

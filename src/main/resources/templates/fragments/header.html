@@ -1,0 +1,9 @@
+<div  th:fragment="header">
+
+    <ul class="horizontal">
+        <li><a th:classappend="${content == 'list-galaxies' ? 'active' : ''}" href="#" th:href="@{/index}">Home</a></li>
+        <li><a th:classappend="${content == 'add-galaxy' ? 'active' : ''}" href="#" th:href="@{/creategalaxy}">Add Galaxy</a></li>
+        <li class="rightli" style="float:right"><a href="javascript:void(0)">Support</a></li>
+    </ul>
+
+</div>

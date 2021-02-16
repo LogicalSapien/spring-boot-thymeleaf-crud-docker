@@ -1,0 +1,26 @@
+<div th:fragment="list-galaxies">
+    <div th:switch="${galaxies}">
+        <h2 th:case="null">No galaxies yet!</h2>
+        <div th:case="*">
+            <h2>Galaxies</h2>
+            <table id="galaxies">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Constellation</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="galaxy : ${galaxies}">
+                    <td th:text="${galaxy.name}"></td>
+                    <td th:text="${galaxy.constellation}"></td>
+                    <td><a th:href="@{/edit/{id}(id=${galaxy.id})}">Edit</a></td>
+                    <td><a th:href="@{/delete/{id}(id=${galaxy.id})}">Delete</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
